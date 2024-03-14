@@ -45,45 +45,16 @@ button {
   cursor: pointer;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  object-fit: cover;
-  width: 360px;
-  height: 200px;
-}
-.start-list {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-.gallery {
-  display: flex;
-  max-width: 1128px;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin: 0 auto;
-  padding: 24px 0;
-}
-.feedback-form {
-  margin-top: 50px;
-}
-.feedback-form-input {
-  display: block;
-  border: 1px solid #808080;
-  border-radius: 4px;
-  padding: 8px 16px;
-  width: 360px;
-  margin-bottom: 8px;
+section {
+  margin: 50px 0;
 }
 
-.feedback-form-btn,
-.start-list a, section a {
+section a,
+button,
+.start-list a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
-  margin-top: 8px;
   color: #fff;
   border-radius: 8px;
   padding: 8px 16px;
@@ -93,10 +64,76 @@ img {
   letter-spacing: 0.04em;
   border: 0;
 }
-input {
-  height: 40px;
+button {
+  min-width: 75px;
+  margin-left: 8px;
+}
+button:hover {
+  transition: background 0.3s;
+  background: #6c8cff;
+}
+button:disabled {
+  color: #989898;
+  background: #cfcfcf;
+  cursor: not-allowed;
 }
 
-textarea {
-  height: 80px;
+input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 16px;
+  width: 272px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+input:hover {
+  transition: border-color 0.3s;
+  border-color: #000000;
+}
+
+input:focus {
+  border-color: #4e75ff;
+  outline: none;
+}
+input:disabled {
+  background: #fafafa;
+  color: #808080;
+}
+
+.start-list {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.timer {
+  margin-top: 32px;
+  display: flex;
+  gap: 24px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
 }

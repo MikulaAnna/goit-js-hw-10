@@ -17,13 +17,15 @@ function generatePromises(event) {
     let promise;
 
     promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (state === 'fulfilled') {
+      if (state === 'fulfilled') {
+        setTimeout(() => {
           resolve(delay);
-        } else if (state === 'rejected') {
+        }, delay);
+      } else if (state === 'rejected') {
+        setTimeout(() => {
           reject(delay);
-        }
-      }, delay);
+        }, delay);
+      }
     });
 
     promise
@@ -39,7 +41,6 @@ function generatePromises(event) {
           progressBarColor: 'rgb(50, 97, 1)',
         });
       })
-
       .catch(delay => {
         iziToast.error({
           message: `Rejected promise in ${delay}ms`,

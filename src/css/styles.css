@@ -78,7 +78,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-input {
+#datetime-picker {
   border: 1px solid #808080;
   border-radius: 4px;
   padding: 8px 16px;
@@ -91,16 +91,18 @@ input {
   color: #2e2f42;
 }
 
-input:hover {
+#datetime-picker,
+.delay-input:hover {
   transition: border-color 0.3s;
   border-color: #000000;
 }
 
-input:focus {
+#datetime-picker,
+.delay-input:focus {
   border-color: #4e75ff;
   outline: none;
 }
-input:disabled {
+#datetime-picker:disabled {
   background: #fafafa;
   color: #808080;
 }
@@ -136,4 +138,78 @@ input:disabled {
   font-size: 16px;
   line-height: 1.5;
   color: #2e2f42;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.delay-input {
+  width: 360px;
+  margin-bottom: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.fieldset {
+  width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 48px;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+.legend {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.notification-btn {
+  width: 360px;
+  height: 40px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  background-color: rgb(78, 117, 255);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.fieldset-label {
+  display: flex;
+   column-gap: 4px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #2e2f42;
+}
+
+.fieldset input {
+  width: 20px;
+  height: 20px;
 }
